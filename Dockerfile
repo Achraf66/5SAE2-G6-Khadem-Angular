@@ -1,16 +1,16 @@
-FROM node:14
+FROM node:14 
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY . .
 
 RUN npm install
 
-COPY . .
+RUN npm run build --prod
 
-RUN npm run build --configuration=production
+FROM nginx:alpine
 
-EXPOSE 4200
+COPY --from=node /app/dist/angular-app /usr/share/nginx/html
 
 CMD ["npm", "start"]
 

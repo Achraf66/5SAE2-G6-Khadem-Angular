@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContratAllComponent } from './contrat-all.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { KhaddemService } from '../khaddem.service';
 
 describe('ContratAllComponent', () => {
@@ -11,7 +12,7 @@ describe('ContratAllComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ContratAllComponent ],
-      imports: [HttpClientTestingModule], 
+      imports: [HttpClientTestingModule, RouterTestingModule],
       providers: [KhaddemService], 
       
     })

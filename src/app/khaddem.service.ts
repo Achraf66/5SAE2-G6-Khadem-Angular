@@ -17,5 +17,16 @@ export class KhaddemService {
   {
     return this.http.get("http://localhost:8089/Kaddem/etudiant/retrieve-all-etudiants");
   }
-  
+
+
+    addContrat(contrat:any)
+  {
+    return this.http.post("http://localhost:8089/Kaddem/contrat/add-contrat",contrat);
+  }
+
+  getcontrats()
+  {
+    return this.http.get("http://localhost:8089/Kaddem/contrat/retrieve-all-contrats");
+  }
+
 }

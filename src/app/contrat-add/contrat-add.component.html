@@ -1,0 +1,18 @@
+<form [formGroup]="contratForm" (ngSubmit)="addContrat()"  class="custom-form">
+  <div class="form-group">
+    <label for="archived">Archived:</label>
+    <input type="text" id="archived" formControlName="archived" [(ngModel)]="contrat.archived" required>montantContrat
+  </div>
+
+  <div class="form-group">
+    <label for="montantContrat">Montant du Contrat:</label>
+    <input type="number" id="montantContrat" formControlName="montantContrat" [(ngModel)]="contrat.montantContrat" required>
+  </div>
+
+  <div class="form-group">
+    <label for="specialite">Specialite:</label>
+    <input type="text" id="specialite" formControlName="specialite" [(ngModel)]="contrat.specialite" required>
+  </div>
+
+  <button type="submit" [disabled]="!contratForm.valid">Add Contrat</button>
+</form>

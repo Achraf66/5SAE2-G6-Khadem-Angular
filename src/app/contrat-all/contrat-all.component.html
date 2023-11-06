@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Montant</th>
+        <th>Archived</th>
+        <th>specialite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of contrats">
+        <td>{{ c.archived }}</td>
+        <td>{{ c.montantContrat }}</td>
+        <td>{{ c.specialite }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

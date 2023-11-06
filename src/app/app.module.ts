@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EtudiantAddComponent } from './etudiant-add/etudiant-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EtudiantAllComponent } from './etudiant-all/etudiant-all.component';
@@ -18,7 +18,8 @@ import { EtudiantAllComponent } from './etudiant-all/etudiant-all.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

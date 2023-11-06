@@ -4,6 +4,8 @@ import { ContratAllComponent } from './contrat-all.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { KhaddemService } from '../khaddem.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormBuilder } from '@angular/forms';
 
 describe('ContratAllComponent', () => {
   let component: ContratAllComponent;
@@ -12,8 +14,8 @@ describe('ContratAllComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ContratAllComponent ],
-      imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [KhaddemService], 
+      imports: [HttpClientTestingModule, HttpClientModule, RouterTestingModule],
+      providers: [KhaddemService,FormBuilder], 
       
     })
     .compileComponents();

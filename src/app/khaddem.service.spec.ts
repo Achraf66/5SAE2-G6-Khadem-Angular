@@ -33,7 +33,7 @@ describe('KhaddemService', () => {
       expect(response).toEqual(mockContrat);
     });
 
-    const req = httpTestingController.expectOne('http://172.25.0.2:8089/Kaddem/contrat/add-contrat');
+    const req = httpTestingController.expectOne('http://192.168.33.10:8089/Kaddem/contrat/add-contrat');
     expect(req.request.method).toBe('POST');
     req.flush(mockContrat);
   });
@@ -47,7 +47,7 @@ describe('KhaddemService', () => {
       expect(response).toEqual(mockContrats);
     });
 
-    const req = httpTestingController.expectOne('http://172.25.0.2:8089/Kaddem/contrat/retrieve-all-contrats');
+    const req = httpTestingController.expectOne('http://192.168.33.10:8089/Kaddem/contrat/retrieve-all-contrats');
     expect(req.request.method).toBe('GET');
     req.flush(mockContrats);
   });

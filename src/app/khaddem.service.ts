@@ -10,23 +10,23 @@ export class KhaddemService {
 
   addEtudiant(etudiant:any)
   {
-    return this.http.post("http://mysqldb:8089/Kaddem/etudiant/add-etudiant",etudiant);
+    return this.http.post("http://172.21.0.2:8089/Kaddem/etudiant/add-etudiant",etudiant);
   }
 
   getEtudiant()
   {
-    return this.http.get("http://mysqldb:8089/Kaddem/etudiant/retrieve-all-etudiants");
+    return this.http.get("http://172.21.0.2:8089/Kaddem/etudiant/retrieve-all-etudiants");
   }
 
 
     addContrat(contrat:any)
   {
-    return this.http.post("http://mysqldb:8089/Kaddem/contrat/add-contrat",contrat);
+    return this.http.post("http://172.21.0.2:8089/Kaddem/contrat/add-contrat",contrat);
   }
 
   getcontrats()
   {
-    return this.http.get("http://mysqldb:8089/Kaddem/contrat/retrieve-all-contrats");
+    return this.http.get("http://172.21.0.2:8089/Kaddem/contrat/retrieve-all-contrats");
   }
 
 }
